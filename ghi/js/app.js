@@ -59,7 +59,37 @@ function createCard(name, description, pictureUrl, starts, ends, location) {
   });
 
 
-//Putting console.log will print what you want to see in the console as you work at each step(DO IT WILL SAVE YOU FROM HEADACHE)
+//This top part of this file is a function that creates a bootstrpa card than is going to dynamiclly created each time we add something to the database
+//Within it we have the backtick `` and $ makind the function dynamic by highlighting the parameters within
+//The date time is an exception as we had to look at the bootstrap to implements a card footer and the date
+
+//Once we created the function we started with our async function where we created window.addEventListener('DOMContentLoaded', async () => {} function
+//within it we define the url of where we want to get conferences. You can get this in insomnia. In our case it's LIST CONFERENCE
+//Then we wrap everything in a try and except. We then error handle if !response.ok and return a error message of our choosing
+ //THen at the else is where the important stuff happens
+
+ //within the  if (detailResponse.ok) {} we first need a varible with the      await detailResponse.json();    THIS IS THE BACKBONE OF THE REST
+ //Once we define the varailbe, in this case it's details, we can now go inside the object and see what the availible parameters are within it
+ //By console.log(details.confrence) keys such as name, description, location, anything we defined in our models. The exception being the Dates as those are made in insombnia when we run a post request
+ //From there we can make variables equal to details.conference.name;, details.conference.location.picture_url;, details.conference.location.name;
+
+ //Once we define what we want to be shown on the frontend(name,picture,date,location) we can now make a html varailbe that takes the function from the top of the file and
+// and creates a card for us my inputting the variable we defiend above(name,picture,date,location) as parameters within the varialbe
+//We also have to add each parameter to the function at the top of the if we keep adding stuff
+//finally we end it with column.innerHTML += html; that modifies the column varailbe and we error with catch at the end
+
+
+//We also have to make sure than within the index.httl that all scripts are running fine
+//Script at the top that links this file and the html
+//and the script in the bottom that does the bootstrap(Not sure what this one does)
+//when making the spacing for the cards make sure there's no columns between that would get in the way
+
+
+
+//Everything below was before or step by step tips that end with what we have above
+
+
+  //Putting console.log will print what you want to see in the console as you work at each step(DO IT WILL SAVE YOU FROM HEADACHE)
 //WHATEVER VARIBLE YOU ASSINGING TO THE AWAIT COMMAND IS THE FIRST THING YOU GO INTO IN THE INNERHTML TAG
 //OR IF THERE IS A FOR LOOP IT IS THE FIRST THING EVERYTHING WILL REFRENCE. WITHIN CONFRENCE WE WANT ALL OF THESE THIGNS
 
