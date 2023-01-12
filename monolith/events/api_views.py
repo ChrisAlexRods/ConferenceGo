@@ -9,7 +9,7 @@ from .models import Conference, Location, State
 
 class LocationListEncoder(ModelEncoder):
     model = Location
-    properties = ["name","picture_url" ]
+    properties = ["name","picture_url", "id" ]
 
 
 class LocationDetailEncoder(ModelEncoder):
@@ -78,7 +78,8 @@ def api_list_conferences(request):
         )
     else:
         content = json.loads(request.body)
-
+        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+        print(content)
         # Get the Location object and put it in the content dict
         try:
             location = Location.objects.get(id=content["location"])
