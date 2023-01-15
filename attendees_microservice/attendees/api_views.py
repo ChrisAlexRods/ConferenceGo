@@ -13,7 +13,7 @@ class ConferenceVODetailEncoder(ModelEncoder):
 
 class AttendeeListEncoder(ModelEncoder):
     model = Attendee
-    properties = ["name"]
+    properties = ["name", "href"]
 
 
 class AttendeeDetailEncoder(ModelEncoder):
