@@ -1,19 +1,26 @@
+import { BrowserRouter, Route } from 'react-router-dom';
 import Nav from './Nav';
 import React from 'react';
 import AttendeesList from './AttendeesList';
 import LocationForm from './LocationForm';
 import ConferenceForm from './ConferenceForm.js';
+import AttendConferenceForm from './AttendConferenceForm';
+import PresentationForm from './PresentationForm';
+import MainPage from './MainPage';
 
 function App(props) {
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <Nav />
       <div className="container">
-        <ConferenceForm/>
-      {/* <LocationForm /> */}
-        {/* <AttendeesList attendees ={props.attendees} /> */}
+        <Route path="/presentations/new" component={PresentationForm}/>
+        <Route path="/conferences/new" component={ConferenceForm} />
+        <Route path="/attendees/new" component={AttendConferenceForm} />
+        <Route path="/locations/new" component={LocationForm} />
+        <Route path="/attendees" component={AttendeesList} />
+        <Route path="/main" component={MainPage} index element={<MainPage />} />
       </div>
-    </React.Fragment>
+    </BrowserRouter>
   );
 }
 
