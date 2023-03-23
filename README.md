@@ -28,5 +28,4 @@ After starting the application, you can use the web interface to:
 - Delete conferences, presentations, locations, and attendees
 ![Mainpage](https://user-images.githubusercontent.com/105233007/227292895-fc5ec78d-0ded-4147-932c-4d9c1fae1014.PNG)![presentation](https://user-images.githubusercontent.com/105233007/227302711-c1fb0dcd-60fb-4610-831f-21c5f9ad0ce1.PNG)
 ![location](https://user-images.githubusercontent.com/105233007/227302697-8bb07cc2-8d77-4e72-b643-9562460965b2.PNG)
-![Uploading presentation.PNG…]()
 ![conference](https://user-images.githubusercontent.com/105233007/227302730-4626c180-7411-47fc-890a-2486b7eb6bf1.PNG)
